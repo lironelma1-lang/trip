@@ -210,6 +210,16 @@ button{font:inherit;color:inherit}
 .sheet .close{
   width:100%;min-height:48px;border:none;background:none;color:var(--muted);font-size:16px;margin-top:4px;cursor:pointer
 }
+.wx{border:1.5px solid var(--line);border-radius:var(--radius);padding:12px 14px;margin-bottom:10px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:start}
+.wx h4{margin:0;font-size:17px;font-weight:800}
+.wx .alt{color:var(--muted);font-size:14px}
+.wx .temp{text-align:left;direction:ltr;font-weight:800;font-size:20px;line-height:1.1;color:var(--accent);white-space:nowrap}
+.wx .temp small{display:block;font-size:12px;font-weight:500;color:var(--muted);direction:rtl;text-align:right}
+.wx p{grid-column:1/-1;margin:2px 0 0;color:var(--muted);font-size:15px}
+.wx .acts{grid-column:1/-1;margin-top:6px}
+.pack{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:16px;margin:0;padding:0}
+.pack dt{font-weight:800;color:var(--accent);direction:ltr;text-align:right;min-width:36px}
+.pack dd{margin:0}
 .foot{margin-top:40px;color:var(--muted);font-size:13.5px;text-align:center;line-height:1.6}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -553,6 +563,31 @@ function renderInfo(){
     <div class="note">נדרשת ברוב האוטוסטרדות והכבישים המהירים באוסטריה. הכי פשוט: וינייטה דיגיטלית לפי לוחית הרישוי מהאתר הרשמי של <span class="en">ASFINAG</span> – ל־<span class="en">1</span> יום או ל־<span class="en">10</span> ימים. אנחנו נוסעים באוסטריה ב־<span class="en">2</span>, <span class="en">3</span> ו־<span class="en">4.10</span>.</div>
     <div class="acts">${site('https://www.asfinag.at/en/toll/vignette/','ASFINAG – רכישה')}</div>
   </section>
+  <section class="sec"><h3>${I.clock} מזג אוויר צפוי לפי אזור</h3>
+    <div class="note">ממוצעים רב־שנתיים לסוף ספטמבר–תחילת אוקטובר. הכלל בטיול הזה: כל <span class="en">300</span> מטר גובה = כ־<span class="en">2</span> מעלות פחות. השבוע מתחיל בחום נעים ומסתיים בקור אלפיני – רק ביום האחרון חוזרים לחום של מינכן.</div>
+    <div class="wx"><div><h4>טיטיזי · היער השחור</h4><span class="alt">גובה ~850 מ׳ · ימים 1–2</span></div><div class="temp">16° / 7°<small>יום / לילה</small></div><p>ערפל בוקר מעל האגם, בהיר בצהריים. גשם בכ־שליש מהימים. ב־Hasenhorn ו־Steinwasen (1,000 מ׳) קר ב־2–3 מעלות מהאגם.</p><div class="acts"><a class="act" href="https://www.google.com/search?q=מזג+אוויר+Titisee" target="_blank" rel="noopener">${I.web}תחזית עדכנית</a></div></div><div class="wx"><div><h4>רוסט · אירופה־פארק</h4><span class="alt">גובה ~140 מ׳ · ימים 3–5</span></div><div class="temp">20° / 10°<small>יום / לילה</small></div><p>עמק הריין – החלק החם והיבש של הטיול. בוקר קריר, צהריים נעימים בחולצה. גשם קצר אפשרי אחר הצהריים.</p><div class="acts"><a class="act" href="https://www.google.com/search?q=מזג+אוויר+Rust+Germany" target="_blank" rel="noopener">${I.web}תחזית עדכנית</a></div></div><div class="wx"><div><h4>לינדאו ו־Highline 179</h4><span class="alt">400 מ׳ / 1,100 מ׳ · יום 6</span></div><div class="temp">16° / 6°<small>יום / לילה</small></div><p>לינדאו על האגם נעימה; על הגשר ב־Reutte רוח ו־3–4 מעלות פחות. השכבה החמה ביום הזה נשארת ברכב, לא במזוודה.</p><div class="acts"><a class="act" href="https://www.google.com/search?q=מזג+אוויר+Reutte" target="_blank" rel="noopener">${I.web}תחזית עדכנית</a></div></div><div class="wx"><div><h4>Interalpen · טירול</h4><span class="alt">גובה ~1,300 מ׳ · ימים 6–7</span></div><div class="temp">11° / 2°<small>יום / לילה</small></div><p>האזור הקר בטיול. לילות ליד האפס, בוקר עם כפור אפשרי, ופסגות עשויות להיות לבנות. באינסברוק (575 מ׳) חם ב־4–5 מעלות.</p><div class="acts"><a class="act" href="https://www.google.com/search?q=מזג+אוויר+Seefeld+in+Tirol" target="_blank" rel="noopener">${I.web}תחזית עדכנית</a></div></div><div class="wx"><div><h4>מינכן</h4><span class="alt">גובה ~520 מ׳ · יום 8</span></div><div class="temp">15° / 6°<small>יום / לילה</small></div><p>סתיו קלאסי – בהיר וקריר, לפעמים אפור וטפטוף. נוח להליכה בעיר.</p><div class="acts"><a class="act" href="https://www.google.com/search?q=מזג+אוויר+München" target="_blank" rel="noopener">${I.web}תחזית עדכנית</a></div></div>
+  </section>
+  <section class="sec"><h3>${I.list} מה לארוז – לכל אדם</h3>
+    <div class="note">העיקרון: שכבות, לא מעילים כבדים. חולצה + פליז + מעיל גשם דק מכסים טווח של <span class="en">2°</span> עד <span class="en">22°</span>. כביסה במלון ב־Rust (3 לילות) חוסכת חצי מזוודה.</div>
+    <dl class="pack">
+      <dt>6</dt><dd>חולצות קצרות (לרוסט ולימי הפארק) + <span class="en">3</span> חולצות ארוכות דקות לטירול</dd>
+      <dt>2</dt><dd>מכנסיים ארוכים נוחים (ג׳ינס/טרנינג) + <span class="en">1</span> מכנסי טיול לימי ההליכה</dd>
+      <dt>1</dt><dd>פליז או סווטשירט עבה – השכבה החמה של כל הטיול</dd>
+      <dt>1</dt><dd>מעיל גשם דק ואטום לרוח (לא מעיל חורף). לילדים – עם כובע</dd>
+      <dt>1</dt><dd>מעיל חם קל (פוך דק) – רק לימים 6–7 בטירול ולערבים</dd>
+      <dt>2</dt><dd>זוגות נעליים: נעלי הליכה סגורות + זוג ספייר. לא סנדלים לפארקים</dd>
+      <dt>8</dt><dd>גרביים, מתוכן <span class="en">2</span> עבות לטירול; הלבשה תחתונה ל־<span class="en">8</span> ימים</dd>
+      <dt>1</dt><dd>כובע צמר + כפפות דקות – ל־Highline 179 ולבוקר ב־Interalpen</dd>
+      <dt>1</dt><dd>בגד ים + כפכפים (Rulantica, בריכות המלונות, ספא)</dd>
+      <dt>1</dt><dd>סט בגדי שינה חמים – החדרים באלפים לא תמיד מחוממים בתחילת אוקטובר</dd>
+    </dl>
+  </section>
+  <section class="sec"><h3>${I.bulb} ומה לא צריך</h3><ul class="list">
+    <li>מעיל חורף כבד – לא יוצא מהמזוודה. הפליז + מעיל הגשם עושים את העבודה.</li>
+    <li>מטרייה גדולה – בפארקים ובגשר היא מטרד. מטרייה קטנה מתקפלת אחת למשפחה מספיקה.</li>
+    <li>יותר מ־<span class="en">2</span> זוגות נעליים. תופסים מקום ולא נדרשים.</li>
+    <li>מגבות – יש בכל המלונות; ב־Rulantica שוכרים במקום.</li>
+  </ul></section>
   <section class="sec"><h3>${I.pin} חירום</h3>
     <div class="grid2">
       <a class="big call" href="tel:112"><b class="en">112</b><span>משטרה, מד״א וכיבוי – בכל אירופה, גם בלי SIM</span></a>
